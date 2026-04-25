@@ -2,9 +2,9 @@ const moves = {
   slash: {
     id: "slash",
     name: "Slash",
+    icon: "",
     description:
       "Physical attack that deals moderate damage. Scales off Attack and is reduced by target Defense.",
-    target: "enemy",
     durationRounds: 0,
     physicalDamage: 12,
     magicalDamage: 0,
@@ -25,8 +25,8 @@ const moves = {
   shield_up: {
     id: "shield_up",
     name: "Shield Up",
+    icon: "",
     description: "Raises the knight's Defense for two turns.",
-    target: "self",
     durationRounds: 2,
     physicalDamage: 0,
     magicalDamage: 0,
@@ -54,8 +54,8 @@ const moves = {
   battle_cry: {
     id: "battle_cry",
     name: "Battle Cry",
+    icon: "",
     description: "Raises the knight's Attack for two turns.",
-    target: "self",
     durationRounds: 2,
     physicalDamage: 0,
     magicalDamage: 0,
@@ -83,8 +83,8 @@ const moves = {
   second_wind: {
     id: "second_wind",
     name: "Second Wind",
+    icon: "",
     description: "Heals the knight for a moderate amount. Scales off Magic.",
-    target: "self",
     durationRounds: 0,
     physicalDamage: 0,
     magicalDamage: 0,
@@ -105,8 +105,8 @@ const moves = {
   shadow_bolt: {
     id: "shadow_bolt",
     name: "Shadow Bolt",
+    icon: "",
     description: "Magic attack that deals heavy damage. Scales off Magic.",
-    target: "enemy",
     durationRounds: 0,
     physicalDamage: 0,
     magicalDamage: 16,
@@ -127,9 +127,9 @@ const moves = {
   drain_life: {
     id: "drain_life",
     name: "Drain Life",
+    icon: "",
     description:
       "Magic attack that deals light damage and heals the witch for the same amount. Scales off Magic.",
-    target: "enemy",
     durationRounds: 0,
     physicalDamage: 0,
     magicalDamage: 8,
@@ -150,8 +150,8 @@ const moves = {
   curse: {
     id: "curse",
     name: "Curse",
+    icon: "",
     description: "Lowers the hero's Attack for two turns.",
-    target: "enemy",
     durationRounds: 2,
     physicalDamage: 0,
     magicalDamage: 0,
@@ -179,9 +179,9 @@ const moves = {
   dark_pact: {
     id: "dark_pact",
     name: "Dark Pact",
+    icon: "",
     description:
       "Raises the witch's Magic for two turns at the cost of some of her own HP.",
-    target: "self",
     durationRounds: 2,
     physicalDamage: 0,
     magicalDamage: 0,
@@ -209,9 +209,9 @@ const moves = {
   bite: {
     id: "bite",
     name: "Bite",
+    icon: "",
     description:
       "Physical attack that deals moderate damage. Scales off Attack and is reduced by Defense.",
-    target: "enemy",
     durationRounds: 0,
     physicalDamage: 12,
     magicalDamage: 0,
@@ -232,9 +232,9 @@ const moves = {
   web_throw: {
     id: "web_throw",
     name: "Web Throw",
+    icon: "",
     description:
       "Physical attack that deals light damage and lowers the hero's Defense for two turns. Scales off Attack and is reduced by Defense.",
-    target: "enemy",
     durationRounds: 2,
     physicalDamage: 8,
     magicalDamage: 0,
@@ -262,9 +262,9 @@ const moves = {
   pounce: {
     id: "pounce",
     name: "Pounce",
+    icon: "",
     description:
       "Physical attack that deals heavy damage. Scales off Attack and is reduced by Defense.",
-    target: "enemy",
     durationRounds: 0,
     physicalDamage: 16,
     magicalDamage: 0,
@@ -285,8 +285,8 @@ const moves = {
   skitter: {
     id: "skitter",
     name: "Skitter",
+    icon: "",
     description: "Raises the spider's Defense for two turns.",
-    target: "self",
     durationRounds: 2,
     physicalDamage: 0,
     magicalDamage: 0,
@@ -314,8 +314,8 @@ const moves = {
   flame_breath: {
     id: "flame_breath",
     name: "Flame Breath",
+    icon: "",
     description: "Magic attack that deals heavy damage. Scales off Magic.",
-    target: "enemy",
     durationRounds: 0,
     physicalDamage: 0,
     magicalDamage: 16,
@@ -336,9 +336,9 @@ const moves = {
   claw_swipe: {
     id: "claw_swipe",
     name: "Claw Swipe",
+    icon: "",
     description:
       "Physical attack that deals moderate damage. Scales off Attack and is reduced by Defense.",
-    target: "enemy",
     durationRounds: 0,
     physicalDamage: 12,
     magicalDamage: 0,
@@ -359,8 +359,8 @@ const moves = {
   intimidate: {
     id: "intimidate",
     name: "Intimidate",
+    icon: "",
     description: "Lowers the target's Attack for two turns.",
-    target: "enemy",
     durationRounds: 2,
     physicalDamage: 0,
     magicalDamage: 0,
@@ -388,8 +388,8 @@ const moves = {
   dragon_scales: {
     id: "dragon_scales",
     name: "Dragon Scales",
+    icon: "",
     description: "Raises the user's Defense for two turns.",
-    target: "self",
     durationRounds: 2,
     physicalDamage: 0,
     magicalDamage: 0,
@@ -417,9 +417,9 @@ const moves = {
   rusty_blade: {
     id: "rusty_blade",
     name: "Rusty Blade",
+    icon: "",
     description:
       "Physical attack that deals moderate damage. Scales off Attack and is reduced by Defense.",
-    target: "enemy",
     durationRounds: 0,
     physicalDamage: 12,
     magicalDamage: 0,
@@ -440,9 +440,9 @@ const moves = {
   dirty_kick: {
     id: "dirty_kick",
     name: "Dirty Kick",
+    icon: "",
     description:
       "Physical attack that deals light damage and lowers the target's Defense for two turns. Scales off Attack and is reduced by Defense.",
-    target: "enemy",
     durationRounds: 2,
     physicalDamage: 8,
     magicalDamage: 0,
@@ -470,8 +470,8 @@ const moves = {
   frenzy: {
     id: "frenzy",
     name: "Frenzy",
+    icon: "",
     description: "Raises the user's Attack for two turns.",
-    target: "self",
     durationRounds: 2,
     physicalDamage: 0,
     magicalDamage: 0,
@@ -499,9 +499,9 @@ const moves = {
   headbutt: {
     id: "headbutt",
     name: "Headbutt",
+    icon: "",
     description:
       "Physical attack that deals heavy damage. Scales off Attack and is reduced by Defense.",
-    target: "enemy",
     durationRounds: 0,
     physicalDamage: 16,
     magicalDamage: 0,
@@ -522,8 +522,8 @@ const moves = {
   firebolt: {
     id: "firebolt",
     name: "Firebolt",
+    icon: "",
     description: "Magic attack that deals moderate damage. Scales off Magic.",
-    target: "enemy",
     durationRounds: 0,
     physicalDamage: 0,
     magicalDamage: 12,
@@ -544,8 +544,8 @@ const moves = {
   arcane_surge: {
     id: "arcane_surge",
     name: "Arcane Surge",
+    icon: "",
     description: "Raises the user's Magic for two turns.",
-    target: "self",
     durationRounds: 2,
     physicalDamage: 0,
     magicalDamage: 0,
@@ -573,9 +573,9 @@ const moves = {
   mana_drain: {
     id: "mana_drain",
     name: "Mana Drain",
+    icon: "",
     description:
       "Magic attack that deals light damage and lowers the target's Magic for two turns. Scales off Magic.",
-    target: "enemy",
     durationRounds: 2,
     physicalDamage: 0,
     magicalDamage: 8,
@@ -603,8 +603,8 @@ const moves = {
   hex_shield: {
     id: "hex_shield",
     name: "Hex Shield",
+    icon: "",
     description: "Raises the user's Defense for two turns.",
-    target: "self",
     durationRounds: 2,
     physicalDamage: 0,
     magicalDamage: 0,
