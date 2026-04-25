@@ -1,0 +1,53 @@
+const express = require("express");
+const enemiesRouter = require("./routes/enemies.routes");
+const playerStatsRouter = require("./routes/player-stats.routes");
+
+const app = express();
+const allowedOrigin = "http://localhost:5173";
+
+app.use((req, res, next) => {
+  if (req.headers.origin === allowedOrigin) {
+    res.setHeader("Access-Control-Allow-Origin", allowedOrigin);
+    res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  }
+
+  if (req.method === "OPTIONS") {
+    return res.sendStatus(204);
+  }
+
+  return next();
+});
+
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.json({
+    message: "RPG Gauntlet backend is running.",
+  });
+});
+
+app.use(enemiesRouter);
+app.use(playerStatsRouter);
+
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "ok",
+  });
+});
+
+app.use((req, res) => {
+  res.status(404).json({
+    error: "Route not found",
+  });
+});
+
+app.use((err, req, res, next) => {
+  console.error(err);
+
+  res.status(err.status || 500).json({
+    error: err.message || "Internal server error",
+  });
+});
+
+module.exports = app;
