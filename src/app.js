@@ -1,6 +1,4 @@
 const express = require("express");
-const enemiesRouter = require("./routes/enemies.routes");
-const playerStatsRouter = require("./routes/player-stats.routes");
 
 const app = express();
 const allowedOrigin = "http://localhost:5173";
@@ -20,21 +18,6 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.json({
-    message: "RPG Gauntlet backend is running.",
-  });
-});
-
-app.use(enemiesRouter);
-app.use(playerStatsRouter);
-
-app.get("/health", (req, res) => {
-  res.status(200).json({
-    status: "ok",
-  });
-});
 
 app.use((req, res) => {
   res.status(404).json({

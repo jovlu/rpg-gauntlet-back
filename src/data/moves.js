@@ -20,7 +20,6 @@ const moves = {
     magicScaling: 0,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [],
   },
   shield_up: {
@@ -43,7 +42,6 @@ const moves = {
     magicScaling: 0,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [
       {
         target: "self",
@@ -73,7 +71,6 @@ const moves = {
     magicScaling: 0,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [
       {
         target: "self",
@@ -103,7 +100,6 @@ const moves = {
     magicScaling: 1,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [],
   },
   shadow_bolt: {
@@ -126,7 +122,6 @@ const moves = {
     magicScaling: 1.2,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [],
   },
   drain_life: {
@@ -142,7 +137,7 @@ const moves = {
     physicalDamageSelf: 0,
     magicalDamageSelf: 0,
     trueDamageSelf: 0,
-    healSelf: 0,
+    healSelf: 8,
     healOther: 0,
     trueHealSelf: 0,
     trueHealOther: 0,
@@ -150,7 +145,6 @@ const moves = {
     magicScaling: 0.9,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 1,
     statusEffects: [],
   },
   curse: {
@@ -173,7 +167,6 @@ const moves = {
     magicScaling: 0,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [
       {
         target: "enemy",
@@ -204,7 +197,6 @@ const moves = {
     magicScaling: 0,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [
       {
         target: "self",
@@ -235,7 +227,6 @@ const moves = {
     magicScaling: 0,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [],
   },
   web_throw: {
@@ -259,7 +250,6 @@ const moves = {
     magicScaling: 0,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [
       {
         target: "enemy",
@@ -290,7 +280,6 @@ const moves = {
     magicScaling: 0,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [],
   },
   skitter: {
@@ -313,7 +302,6 @@ const moves = {
     magicScaling: 0,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [
       {
         target: "self",
@@ -343,7 +331,6 @@ const moves = {
     magicScaling: 1.2,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [],
   },
   claw_swipe: {
@@ -367,7 +354,6 @@ const moves = {
     magicScaling: 0,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [],
   },
   intimidate: {
@@ -390,7 +376,6 @@ const moves = {
     magicScaling: 0,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [
       {
         target: "enemy",
@@ -420,7 +405,6 @@ const moves = {
     magicScaling: 0,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [
       {
         target: "self",
@@ -451,7 +435,6 @@ const moves = {
     magicScaling: 0,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [],
   },
   dirty_kick: {
@@ -475,7 +458,6 @@ const moves = {
     magicScaling: 0,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [
       {
         target: "enemy",
@@ -505,7 +487,6 @@ const moves = {
     magicScaling: 0,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [
       {
         target: "self",
@@ -536,7 +517,6 @@ const moves = {
     magicScaling: 0,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [],
   },
   firebolt: {
@@ -559,7 +539,6 @@ const moves = {
     magicScaling: 1,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [],
   },
   arcane_surge: {
@@ -582,7 +561,6 @@ const moves = {
     magicScaling: 0,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [
       {
         target: "self",
@@ -613,7 +591,6 @@ const moves = {
     magicScaling: 0.8,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [
       {
         target: "enemy",
@@ -643,7 +620,6 @@ const moves = {
     magicScaling: 0,
     defenseScaling: 0,
     healthScaling: 0,
-    lifestealRatio: 0,
     statusEffects: [
       {
         target: "self",

@@ -31,9 +31,6 @@ const moveBlueprint = {
   defenseScaling: 0,
   healthScaling: 0,
 
-  // If greater than 0, heal self for final damage dealt * lifestealRatio.
-  lifestealRatio: 0,
-
   // Positive amount = buff, negative amount = debuff.
   statusEffects: [
     {
