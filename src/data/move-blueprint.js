@@ -6,6 +6,8 @@ const moveBlueprint = {
   id: "slash",
   name: "Slash",
   icon: "",
+  iconName: "",
+  iconIndex: "",
   qte: "",
   qteValue: null,
   description:
