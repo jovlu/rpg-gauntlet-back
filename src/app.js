@@ -2,6 +2,7 @@ const express = require("express");
 const enemiesRouter = require("./routes/enemies.routes");
 const movesRouter = require("./routes/moves.routes");
 const playerRouter = require("./routes/player.routes");
+const qtesRouter = require("./routes/qtes.routes");
 
 const app = express();
 const allowedOrigin = "http://localhost:5173";
@@ -24,6 +25,7 @@ app.use(express.json());
 app.use(movesRouter);
 app.use(playerRouter);
 app.use(enemiesRouter);
+app.use(qtesRouter);
 
 app.use((req, res) => {
   res.status(404).json({

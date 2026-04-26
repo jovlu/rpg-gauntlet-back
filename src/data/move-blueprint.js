@@ -8,14 +8,6 @@ const moveBlueprint = {
   icon: "",
   iconName: "",
   iconIndex: "",
-
-  // Possible values come from the QTE registry, for example:
-  // "", "mash_spacebar", "click_bubbles", "keyboard_buttons",
-  // "type_words", "mouse_path", "hold_release",
-  // "shrinking_target_click", "arrow_sequence", "dodge_lanes",
-  // "follow_moving_target"
-  qte: "",
-  qteValue: null,
   description:
     "Physical attack that deals moderate damage. Scales off Attack and is reduced by target Defense.",
 
