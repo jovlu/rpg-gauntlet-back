@@ -81,6 +81,28 @@ router.put("/player/stats", (req, res) => {
   });
 });
 
+router.put("/player/givexp", (req, res) => {
+  const amount = req.body?.amount;
+
+  if (typeof amount !== "number") {
+    return res.status(400).json({
+      error: 'Field "amount" must be a number.',
+    });
+  }
+
+  if (amount < 0) {
+    return res.status(400).json({
+      error: 'Field "amount" cannot be negative.',
+    });
+  }
+
+  player.stats.xp += amount;
+
+  return res.status(200).json({
+    xp: player.stats.xp,
+  });
+});
+
 router.put("/player/moves", (req, res) => {
   const nextMoves = req.body?.moves;
 
