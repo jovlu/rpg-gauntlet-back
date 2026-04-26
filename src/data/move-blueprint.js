@@ -6,6 +6,8 @@ const moveBlueprint = {
   id: "slash",
   name: "Slash",
   icon: "",
+  qte: "",
+  qteValue: null,
   description:
     "Physical attack that deals moderate damage. Scales off Attack and is reduced by target Defense.",
 
