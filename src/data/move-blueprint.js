@@ -8,6 +8,12 @@ const moveBlueprint = {
   icon: "",
   iconName: "",
   iconIndex: "",
+
+  // Possible values come from the QTE registry, for example:
+  // "", "mash_spacebar", "click_bubbles", "keyboard_buttons",
+  // "type_words", "mouse_path", "hold_release",
+  // "shrinking_target_click", "arrow_sequence", "dodge_lanes",
+  // "follow_moving_target"
   qte: "",
   qteValue: null,
   description:
@@ -38,7 +44,10 @@ const moveBlueprint = {
   // Positive amount = buff, negative amount = debuff.
   statusEffects: [
     {
+      // Possible values: "self", "enemy"
       target: "self",
+
+      // Possible values: "health", "attack", "defense", "magic"
       stat: "attack",
       amount: 0,
       durationRounds: 0,

@@ -4,10 +4,10 @@ const enemies = [
     index: "6.e",
     moves: ["shadow_bolt", "drain_life", "curse", "dark_pact"],
     stats: {
-      health: 85,
-      attack: 6,
-      defense: 8,
-      magic: 15,
+      health: 78,
+      attack: 4,
+      defense: 6,
+      magic: 13,
     },
   },
   {
@@ -15,10 +15,10 @@ const enemies = [
     index: "7.i",
     moves: ["bite", "web_throw", "pounce", "skitter"],
     stats: {
-      health: 95,
-      attack: 14,
-      defense: 10,
-      magic: 4,
+      health: 96,
+      attack: 13,
+      defense: 9,
+      magic: 2,
     },
   },
   {
@@ -26,10 +26,10 @@ const enemies = [
     index: "9.c",
     moves: ["flame_breath", "claw_swipe", "intimidate", "dragon_scales"],
     stats: {
-      health: 140,
-      attack: 18,
-      defense: 16,
-      magic: 18,
+      health: 150,
+      attack: 15,
+      defense: 14,
+      magic: 16,
     },
   },
   {
@@ -37,10 +37,10 @@ const enemies = [
     index: "1.c",
     moves: ["rusty_blade", "dirty_kick", "frenzy", "headbutt"],
     stats: {
-      health: 90,
-      attack: 13,
-      defense: 9,
-      magic: 3,
+      health: 92,
+      attack: 12,
+      defense: 8,
+      magic: 1,
     },
   },
   {
@@ -48,10 +48,10 @@ const enemies = [
     index: "1.g",
     moves: ["firebolt", "arcane_surge", "mana_drain", "hex_shield"],
     stats: {
-      health: 80,
-      attack: 4,
-      defense: 8,
-      magic: 14,
+      health: 74,
+      attack: 3,
+      defense: 7,
+      magic: 12,
     },
   },
 ];
