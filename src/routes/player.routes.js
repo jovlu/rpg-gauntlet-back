@@ -12,6 +12,28 @@ router.get("/player", (req, res) => {
   });
 });
 
+router.put("/player/level", (req, res) => {
+  const nextLevel = req.body?.level;
+
+  if (!Number.isInteger(nextLevel)) {
+    return res.status(400).json({
+      error: 'Field "level" must be an integer.',
+    });
+  }
+
+  if (nextLevel < 1 || nextLevel > 5) {
+    return res.status(400).json({
+      error: 'Field "level" must be between 1 and 5.',
+    });
+  }
+
+  player.level = nextLevel;
+
+  return res.status(200).json({
+    level: player.level,
+  });
+});
+
 router.put("/player/stats", (req, res) => {
   const nextStats = req.body;
   const currentStats = player.stats;

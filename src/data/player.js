@@ -1,14 +1,14 @@
 const player = {
   name: "Knight",
   index: "2.a",
-  level: 2,
+  level: 1,
   moves: ["slash", "shield_up", "battle_cry", "second_wind"],
   stats: {
-    health: 105,
-    attack: 11,
-    defense: 10,
-    magic: 9,
-    xp: 12,
+    health: 52,
+    attack: 6,
+    defense: 5,
+    magic: 5,
+    xp: 8,
   },
 };
 
