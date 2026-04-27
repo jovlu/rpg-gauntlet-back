@@ -1,4 +1,5 @@
 const express = require("express");
+const battleRouter = require("./routes/battle.routes");
 const enemiesRouter = require("./routes/enemies.routes");
 const movesRouter = require("./routes/moves.routes");
 const playerRouter = require("./routes/player.routes");
@@ -22,6 +23,7 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
+app.use(battleRouter);
 app.use(movesRouter);
 app.use(playerRouter);
 app.use(enemiesRouter);
