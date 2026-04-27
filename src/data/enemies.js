@@ -2,6 +2,7 @@ const enemies = [
   {
     name: "Witch",
     index: "6.e",
+    level: 1,
     moves: ["shadow_bolt", "drain_life", "curse", "dark_pact"],
     stats: {
       health: 38,
@@ -13,6 +14,7 @@ const enemies = [
   {
     name: "Giant Spider",
     index: "7.i",
+    level: 2,
     moves: ["bite", "web_throw", "pounce", "skitter"],
     stats: {
       health: 58,
@@ -24,6 +26,7 @@ const enemies = [
   {
     name: "Dragon",
     index: "9.c",
+    level: 3,
     moves: ["flame_breath", "claw_swipe", "intimidate", "dragon_scales"],
     stats: {
       health: 92,
@@ -35,23 +38,25 @@ const enemies = [
   {
     name: "Goblin Warrior",
     index: "1.c",
+    level: 4,
     moves: ["rusty_blade", "dirty_kick", "frenzy", "headbutt"],
     stats: {
-      health: 50,
-      attack: 6,
-      defense: 4,
+      health: 102,
+      attack: 9,
+      defense: 7,
       magic: 1,
     },
   },
   {
     name: "Goblin Mage",
     index: "1.g",
+    level: 5,
     moves: ["firebolt", "arcane_surge", "mana_drain", "hex_shield"],
     stats: {
-      health: 42,
-      attack: 2,
-      defense: 3,
-      magic: 7,
+      health: 118,
+      attack: 3,
+      defense: 9,
+      magic: 15,
     },
   },
 ];

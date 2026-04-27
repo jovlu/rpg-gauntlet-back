@@ -8,7 +8,7 @@ const player = {
     attack: 6,
     defense: 5,
     magic: 5,
-    xp: 8,
+    xp: 3,
   },
 };
 
