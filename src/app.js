@@ -6,11 +6,28 @@ const playerRouter = require("./routes/player.routes");
 const qtesRouter = require("./routes/qtes.routes");
 
 const app = express();
-const allowedOrigin = "http://localhost:5173";
+const DEFAULT_ALLOWED_ORIGINS = ["https://gauntlet.b-cdn.net"];
+
+function getAllowedOrigins() {
+  const configuredOrigins = process.env.CORS_ORIGINS;
+
+  if (!configuredOrigins) {
+    return DEFAULT_ALLOWED_ORIGINS;
+  }
+
+  return configuredOrigins
+    .split(",")
+    .map((origin) => origin.trim())
+    .filter(Boolean);
+}
 
 app.use((req, res, next) => {
-  if (req.headers.origin === allowedOrigin) {
-    res.setHeader("Access-Control-Allow-Origin", allowedOrigin);
+  const requestOrigin = req.headers.origin;
+  const allowedOrigins = getAllowedOrigins();
+
+  if (requestOrigin && allowedOrigins.includes(requestOrigin)) {
+    res.setHeader("Access-Control-Allow-Origin", requestOrigin);
+    res.setHeader("Vary", "Origin");
     res.setHeader("Access-Control-Allow-Methods", "GET,POST,PUT,OPTIONS");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   }
