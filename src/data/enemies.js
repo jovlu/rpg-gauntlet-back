@@ -5,10 +5,10 @@ const enemies = [
     level: 1,
     moves: ["shadow_bolt", "drain_life", "curse", "dark_pact"],
     stats: {
-      health: 38,
+      health: 42,
       attack: 2,
-      defense: 2,
-      magic: 7,
+      defense: 3,
+      magic: 8,
     },
   },
   {
@@ -17,9 +17,9 @@ const enemies = [
     level: 2,
     moves: ["bite", "web_throw", "pounce", "skitter"],
     stats: {
-      health: 58,
-      attack: 7,
-      defense: 4,
+      health: 66,
+      attack: 8,
+      defense: 5,
       magic: 1,
     },
   },
@@ -29,10 +29,10 @@ const enemies = [
     level: 3,
     moves: ["flame_breath", "claw_swipe", "intimidate", "dragon_scales"],
     stats: {
-      health: 92,
-      attack: 8,
-      defense: 6,
-      magic: 9,
+      health: 102,
+      attack: 9,
+      defense: 7,
+      magic: 11,
     },
   },
   {
@@ -41,9 +41,9 @@ const enemies = [
     level: 4,
     moves: ["rusty_blade", "dirty_kick", "frenzy", "headbutt"],
     stats: {
-      health: 102,
-      attack: 9,
-      defense: 7,
+      health: 114,
+      attack: 10,
+      defense: 8,
       magic: 1,
     },
   },
@@ -53,10 +53,10 @@ const enemies = [
     level: 5,
     moves: ["firebolt", "arcane_surge", "mana_drain", "hex_shield"],
     stats: {
-      health: 118,
+      health: 128,
       attack: 3,
-      defense: 9,
-      magic: 15,
+      defense: 10,
+      magic: 16,
     },
   },
 ];

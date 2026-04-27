@@ -4,6 +4,7 @@ const player = require("../data/player");
 const unlockedMoves = require("../data/unlocked-moves");
 
 const router = express.Router();
+const HEALTH_UPGRADE_STEP = 5;
 const statKeys = ["health", "attack", "defense", "magic"];
 
 router.get("/player", (req, res) => {
@@ -58,9 +59,37 @@ router.put("/player/stats", (req, res) => {
     }
   }
 
-  const xpCost = statKeys.reduce((total, key) => {
-    return total + (nextStats[key] - currentStats[key]);
-  }, 0);
+  const deltas = Object.fromEntries(
+    statKeys.map((key) => [key, nextStats[key] - currentStats[key]]),
+  );
+
+  for (const key of statKeys) {
+    const delta = deltas[key];
+
+    if (!Number.isInteger(delta)) {
+      return res.status(400).json({
+        error: `Field "${key}" must change by a whole number.`,
+      });
+    }
+
+    if (delta < 0) {
+      return res.status(400).json({
+        error: `Field "${key}" cannot be decreased.`,
+      });
+    }
+  }
+
+  if (deltas.health % HEALTH_UPGRADE_STEP !== 0) {
+    return res.status(400).json({
+      error: `Health must increase in steps of ${HEALTH_UPGRADE_STEP}.`,
+    });
+  }
+
+  const xpCost =
+    deltas.attack +
+    deltas.defense +
+    deltas.magic +
+    deltas.health / HEALTH_UPGRADE_STEP;
 
   const nextXp = currentStats.xp - xpCost;
 
